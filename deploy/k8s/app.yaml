@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+ name: apps
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: rzrmodmail
+ namespace: apps
+spec:
+ selector:
+   matchLabels:
+     app: rzrmodmail
+ template:
+   metadata:
+     labels:
+       app: rzrmodmail
+   spec:
+     containers:
+       - name: rzrmodmail
+         image: ghcr.io/builtbyrebels/rzrmodmail-ghcr:latest
+         envFrom:
+         - secretRef:
+             name: modmail-env
+     imagePullSecrets:
+     - name: ghcr-login-secret
