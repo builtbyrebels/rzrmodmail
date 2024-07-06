@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/builtbyrebels/rzrmodmail/compare/v1.1.0...v1.1.1) (2024-07-06)
+
+
+### Bug Fixes
+
+* remove namespace reference ([#30](https://github.com/builtbyrebels/rzrmodmail/issues/30)) ([a270181](https://github.com/builtbyrebels/rzrmodmail/commit/a2701810edb8d6ceb4567a076e9924e6f92b812b))
+
 ## [1.1.0](https://github.com/builtbyrebels/rzrmodmail/compare/v1.0.0...v1.1.0) (2024-07-06)
 
 
