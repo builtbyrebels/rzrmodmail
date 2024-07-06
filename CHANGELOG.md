@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.0](https://github.com/builtbyrebels/rzrmodmail/compare/v1.0.0...v1.1.0) (2024-07-06)
+
+
+### Features
+
+* **build:** add Dockerfile to .dockerignore ([eb7995d](https://github.com/builtbyrebels/rzrmodmail/commit/eb7995d90652345fd5521603ca25fbddb3e57549))
+* **build:** drop root privileges, update .dockerignore ([a7a7ce1](https://github.com/builtbyrebels/rzrmodmail/commit/a7a7ce1390e6717bf41d82f8febc35a8a7c4147a))
+* gh deploy ([#26](https://github.com/builtbyrebels/rzrmodmail/issues/26)) ([989200b](https://github.com/builtbyrebels/rzrmodmail/commit/989200b62ece9e3616ceb11392200339d96b1cf8))
+
+
+### Bug Fixes
+
+* 3291: Resolve code scanning alert for URL sanitization ([2b66710](https://github.com/builtbyrebels/rzrmodmail/commit/2b667102e95354fbdf07f88c3c88e95d802be0b7))
+* discord invite ( new server ) ([#3307](https://github.com/builtbyrebels/rzrmodmail/issues/3307)) ([53d40e0](https://github.com/builtbyrebels/rzrmodmail/commit/53d40e0585919eadba97e7d0abcb822d1ebcbb34))
+
 ## 1.0.0 (2024-07-06)
 
 
