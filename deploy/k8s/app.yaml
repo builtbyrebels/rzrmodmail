@@ -19,7 +19,7 @@ spec:
    spec:
      containers:
        - name: rzrmodmail
-         image: ghcr.io/builtbyrebels/rzrmodmail-ghcr:latest
+         image: ghcr.io/builtbyrebels/rzrmodmail:latest
          envFrom:
          - secretRef:
              name: modmail-env
