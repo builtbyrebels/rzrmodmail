@@ -1,12 +1,29 @@
 # Changelog
 
+## 1.0.0 (2024-07-06)
+
+
+### Features
+
+* **build:** add Dockerfile to .dockerignore ([eb7995d](https://github.com/builtbyrebels/rzrmodmail/commit/eb7995d90652345fd5521603ca25fbddb3e57549))
+* **build:** drop root privileges, update .dockerignore ([a7a7ce1](https://github.com/builtbyrebels/rzrmodmail/commit/a7a7ce1390e6717bf41d82f8febc35a8a7c4147a))
+* gh deploy ([#26](https://github.com/builtbyrebels/rzrmodmail/issues/26)) ([989200b](https://github.com/builtbyrebels/rzrmodmail/commit/989200b62ece9e3616ceb11392200339d96b1cf8))
+
+
+### Bug Fixes
+
+* 3291: Resolve code scanning alert for URL sanitization ([2b66710](https://github.com/builtbyrebels/rzrmodmail/commit/2b667102e95354fbdf07f88c3c88e95d802be0b7))
+* discord invite ( new server ) ([#3307](https://github.com/builtbyrebels/rzrmodmail/issues/3307)) ([53d40e0](https://github.com/builtbyrebels/rzrmodmail/commit/53d40e0585919eadba97e7d0abcb822d1ebcbb34))
+
+## Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 This project mostly adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html);
 however, insignificant breaking changes do not guarantee a major version bump, see the reasoning [here](https://github.com/modmail-dev/modmail/issues/319). If you're a plugin developer, note the "BREAKING" section.
 
-# v4.1.0
+## v4.1.0
 
 Drops support for Python 3.9. Python 3.10 and Python 3.11 are now the only supported versions.
 
@@ -46,7 +63,7 @@ Drops support for Python 3.9. Python 3.10 and Python 3.11 are now the only suppo
 - `ConfigManager.get` no longer accepts two positional arguments: the `convert` argument is now keyword-only.
 - Various dependencies have been updated to their latest versions.
 
-# v4.0.2
+## v4.0.2
 
 ### Breaking
 
@@ -65,7 +82,7 @@ Drops support for Python 3.9. Python 3.10 and Python 3.11 are now the only suppo
 - Added workflow to automatically build Docker image ([PR #3232](https://github.com/modmail-dev/modmail/pull/3228))
 - Updated installation guide to reflect new preferred hosting methods
 
-# v4.0.1
+## v4.0.1
 
 This is a hotfix release.
 
@@ -77,7 +94,7 @@ This is a hotfix release.
 
 - Thread cooldown
 
-# v4.0.0
+## v4.0.0
 
 ### Breaking
 
@@ -141,13 +158,13 @@ This is a hotfix release.
 - Bump lottie to v0.6.11
 - Remove deprecated `core/decorators.py` from v3.3.0
 
-# v3.10.5
+## v3.10.5
 
 ### Internal
 
 - Locked plugin registry version impending v4 release.
 
-# v3.10.4
+## v3.10.4
 
 ### Improved
 
@@ -161,21 +178,21 @@ This is a hotfix release.
 
 - Set `LOG_DISCORD` environment variable to the logger level and log discord events.
 
-# v3.10.3
+## v3.10.3
 This is a hotfix for contact command.
 
 ### Fixed
 
 - Fixed a bug where contacting with no category argument defaults to the top category.
 
-# v3.10.2
+## v3.10.2
 This is a hotfix for react to contact.
 
 ### Fixed
 
 - React to contact now works properly.
 
-# v3.10.1
+## v3.10.1
 
 This is a hotfix for the edit command.
 
@@ -183,7 +200,7 @@ This is a hotfix for the edit command.
 
 - `?edit` now works properly.
 
-# v3.10.0
+## v3.10.0
 
 v3.10 adds group conversations while resolving other bugs and QOL changes. It is potentially breaking to some plugins that adds functionality to threads.
 
@@ -226,7 +243,7 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
 - Reload thread cache only when it's the first on_ready trigger. ([GH #3037](https://github.com/modmail-dev/modmail/issues/3037))
 - `format_channel_name` is now extendable to plugins. Modify `Bot.format_channel_name(bot, author, exclude_channel=None, force_null=False):`. ([GH #2982](https://github.com/modmail-dev/modmail/issues/2982))
 
-# v3.9.5
+## v3.9.5
 
 ### Internal
 
@@ -234,7 +251,7 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
 - More debug log files are now kept.
 - Resolve SSL errors by retrying without SSL
 
-# v3.9.4
+## v3.9.4
 
 ### Fixed
 
@@ -250,7 +267,7 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
 
 - Change heroku python version to 3.9.4 ([PR #3001](https://github.com/modmail-dev/modmail/pull/3001))
 
-# v3.9.3
+## v3.9.3
 
 ### Added
 
@@ -263,7 +280,7 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
   - `format_channel_name(bot, author, exclude_channel=None, force_null=False)`
 
 
-# v3.9.2
+## v3.9.2
 
 ### Improved
 
@@ -273,14 +290,14 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
 
 - `user_typing` default in the config help is now correct.
 
-# v3.9.1
+## v3.9.1
 
 ### Internal
 
 - `bot.run` now more gracefully handles closing, similar to how discord.py handles it.
   - No longer displays `PrivilegedIntentsRequired` exception when exiting when presence intent is disabled.
 
-# v3.9.0
+## v3.9.0
 
 ### Breaking
 
@@ -296,7 +313,7 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
 
 - `thread.reply` now returns (msg_to_user, msg_to_thread). Can be useful in plugins.
 
-# v3.8.6
+## v3.8.6
 
 ### Added
 
@@ -304,7 +321,7 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
   - Simply add your extension to plugins/@local, and use `?plugin add local/plugin-name` to load the plugin as normal
 - Updated deps for requirements.min.txt and pyproject.toml
 
-# v3.8.5
+## v3.8.5
 
 ### Added
 
@@ -316,7 +333,7 @@ v3.10 adds group conversations while resolving other bugs and QOL changes. It is
 - Non-master/development branch deployments no longer cause errors to be raised.
 - Autotriggers now can search for roles/channels in guild context. ([GH #2961](https://github.com/modmail-dev/modmail/issues/2961))
 
-# v3.8.4
+## v3.8.4
 
 This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 where users were not properly cached.
 
@@ -324,7 +341,7 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 
 - Corrupted data is no longer saved to thread cache.
 
-# v3.8.2
+## v3.8.2
 
 ### Fixed
 
@@ -333,7 +350,7 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 - Retrieve user from Discord API if user has left the server, resolving issues in `?block`. ([GH #2935](https://github.com/modmail-dev/modmail/issues/2935), [PR #2936](https://github.com/modmail-dev/modmail/pull/2936))
 - IDs in `<member>` commands work now.
 
-# v3.8.1
+## v3.8.1
 
 ### Fixed
 
@@ -341,7 +358,7 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 - `confirm_thread_creation` no longer raises unnecessary errors. ([GH #2931](https://github.com/modmail-dev/modmail/issues/2931), [PR #2933](https://github.com/modmail-dev/modmail/pull/2933))
 - Autotriggers no longer sends attachments back. ([GH #2932](https://github.com/modmail-dev/modmail/issues/2932))
 
-# v3.8.0
+## v3.8.0
 
 ### Added
 
@@ -377,20 +394,20 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 - Make use of `git branch --show-current` to retrieve branch instead of using prerelease version check.
 - Use discord.py 1.6.0 from PyPi instead of the development clone.
 
-# v3.7.13
+## v3.7.13
 
 ### Fixed
 
 - Notes in config help are now optional.
 
-# v3.7.12
+## v3.7.12
 
 ### Fixed
 
 - Bot was not responding to union errors.
 - `?block [reason]` now works in threads.
 
-# v3.7.11
+## v3.7.11
 
 ### Improved
 
@@ -404,14 +421,14 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 
 - Removed unnecessary loggings.
 
-# v3.7.10
+## v3.7.10
 
 ### Added
 
 - Added `update_channel_id` to specify which channel autoupdate notifications were being sent to.
 - Added `show_timestamp` to specify if timestamps should be displayed in message embeds. ([GH #2885](https://github.com/modmail-dev/modmail/issues/2885))
 
-# v3.7.9
+## v3.7.9
 
 ### Fixed
 
@@ -421,7 +438,7 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 
 - Clearer plugin debug messages when plugins are disabled
 
-# v3.7.8
+## v3.7.8
 
 ### Added
 
@@ -436,7 +453,7 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 ### Internal
 - Optimised `perms get`, bot should respond faster now.
 
-# v3.7.7
+## v3.7.7
 
 ### Added
 
@@ -446,26 +463,26 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 
 - Skip blocked roles check if user is not in main guild.
 
-# v3.7.6
+## v3.7.6
 
 ### Fixed
 
 - Autoupdate persists despite errors.
 - Mention when normal thread created was not working. ([GH #2883](https://github.com/modmail-dev/modmail/issues/2883))
 
-# v3.7.5
+## v3.7.5
 
 ### Fixed
 
 - Close on emoji was not working.
 
-# v3.7.3
+## v3.7.3
 
 ### Fixed
 
 - React to contact threads were treated like normal contact threads. ([GH #2881](https://github.com/modmail-dev/modmail/issues/2881))
 
-# v3.7.2
+## v3.7.2
 
 ### Added
 
@@ -475,14 +492,14 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 
 - `?config set` would not respond if an invalid key was provided.
 
-# v3.7.1
+## v3.7.1
 
 ### Fixed
 
 - Bot will now leave a reaction on the react to contact message.
 - Added docstring to selfcontact
 
-# v3.7.0
+## v3.7.0
 
 ### Added
 
@@ -523,21 +540,21 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 - `on_thread_close` event for plugins.
 - `on_thread_reply` event for plugins.
 
-# v3.6.2
+## v3.6.2
 
 ### Fixed
 
 - Plugins downloading requirements in virtual environments.
 
 
-# v3.6.1
+## v3.6.1
 
 ### Added
 
 - Proper error message if privileged intents not explicitly granted to bot.
 
 
-# v3.6.0
+## v3.6.0
 
 ### Added
 
@@ -561,7 +578,7 @@ This update is a quick hotfix for a weird behaviour experienced on 1 Feb 2021 wh
 - Use `--diff` for black CI instead of `--check` ([GH #2816](https://github.com/modmail-dev/modmail/issues/2816))
 
 
-# v3.5.0
+## v3.5.0
 
 Fixed discord.py issue.
 
@@ -589,7 +606,7 @@ Fixed discord.py issue.
 - Plugins not loading in Windows OS. Now uses proactor event loop for asyncio which should fix this.
 
 
-# v3.4.1
+## v3.4.1
 
 ### Fixed
 
@@ -603,7 +620,7 @@ Fixed discord.py issue.
 - `thread_ready` is dispatched when a thread finishes its setup steps.
 
 
-# v3.4.0
+## v3.4.0
 
 ### Added
 
@@ -648,19 +665,19 @@ Fixed discord.py issue.
 - New checks with thread create / find.
 - No more flake8 and Travis.
 
-# v3.3.2
+## v3.3.2
 
 ### Fixed
 
 - An oversight with the permission system.
 
-# v3.3.1
+## v3.3.1
 
 ### Emergency Patch
 
 - Fixed a recent issue with an animation KeyError due to Discord API update.
 
-# v3.3.0
+## v3.3.0
 
 ### Important
 
@@ -727,7 +744,7 @@ Fixed discord.py issue.
 - Simpler status and activity logic.
 - New logging logic.
 
-# v3.2.2
+## v3.2.2
 
 Security update!
 
@@ -739,7 +756,7 @@ Security update!
 - We advise you to update to this version.
 - If you felt your credentials had been leaked, consider changing your bot token / MongoURI.
 
-# v3.2.1
+## v3.2.1
 
 ### Fixed
 
@@ -749,7 +766,7 @@ Security update!
 
 - Discord colors by default when addressing them by names.
 
-# v3.2.0
+## v3.2.0
 
 ### Added
 
@@ -770,13 +787,13 @@ Security update!
 - Use regex to parse Changes, Added, Fixed, etc. and description.
 - Adds `PermissionLevel.INVALID` when commands don't have a permission level.
 
-# v3.1.1
+## v3.1.1
 
 ### Fixed
 
 - An issue when reading `config_help.json` for Windows users due to an encoding problem.
 
-# v3.1.0
+## v3.1.0
 
 ### Breaking
 
@@ -841,14 +858,14 @@ Security update!
 - Reduce redundancies in `?perms` sub commands.
 - paginator been split into `EmbedPaginatorSession` and `MessagePaginatorSession`, both subclassing `PaginatorSession`.
 
-# v3.0.3
+## v3.0.3
 
 ### Added
 
 - New commands, `?alias edit <name> <target>` and `?snippets edit <name> <target>`.
   - They can be used to edit aliases and snippets, respectively.
 
-# v3.0.2
+## v3.0.2
 
 ### Added
 
@@ -858,13 +875,13 @@ Security update!
 
 - Removed some aliases from `?oauth`.
 
-# v3.0.1
+## v3.0.1
 
 ### Fixed
 
 - Many bugs with `thread_auto_close`.
 
-# v3.0.0
+## v3.0.0
 
 ### Added 
 
@@ -890,19 +907,19 @@ Read more about updating your bot [here](https://github.com/modmail-dev/modmail/
 - Plugin requirement installation now works in virtual environments
 
 
-# v2.24.1
+## v2.24.1
 
 ### Fixed
 
 Fixed a bug with branches and `?plugin update`.
 
-# v2.24.0
+## v2.24.0
 
 ### Added
 
 Branch support for `?plugin add` and in the registry. Typically for developers.    
 
-# v2.23.0
+## v2.23.0
 
 ### Added 
 
@@ -914,7 +931,7 @@ b) The user shares more than one server with the bot.
 
 Notes with the `?note` command are now automatically pinned within the thread channel.
 
-# v2.22.0
+## v2.22.0
 
 ### Added
 
@@ -924,13 +941,13 @@ Added a 🛑 reaction to the paginators to delete the embed.
 
 `?blocked` is now paginated using reactions. This fixes [#249](https://github.com/modmail-dev/modmail/issues/249)
 
-# v2.21.0
+## v2.21.0
 
 ### Added 
 
 New `?plugin registry compact` command which shows a more compact view of all plugins.
 
-# v2.20.2
+## v2.20.2
 
 ### Plugin Registry
 
@@ -941,7 +958,7 @@ Add your plugin in the `plugins/registry.json` file in the main repository.
 
 `?debug` command now shows the most recent logs first. (Starts at the last page)
 
-# v2.20.1
+## v2.20.1
 
 ### What's new?
 
@@ -957,13 +974,13 @@ This update contains mostly internal changes.
   - Completely revamped help command, few users changes.
   - Removed ABC (internal).
 
-# v2.20.0
+## v2.20.0
 
 ### What's new? 
 
 New `?oauth whitelist` command, which allows you to whitelist users so they can log in via discord to view logs. To set up oauth login for your logviewer app, check the logviewer [repo](https://github.com/modmail-dev/logviewer).
 
-# v2.19.1
+## v2.19.1
 
 ### Changed
 
@@ -971,32 +988,32 @@ New `?oauth whitelist` command, which allows you to whitelist users so they can 
   - `?update force`.
 - Plugin developers now have a new event called `on_plugin_ready`; this is a coroutine and is awaited when all plugins are loaded. Use `on_plugin_ready` instead of `on_ready` since `on_ready` will not get called in plugins.
 
-# v2.19.0
+## v2.19.0
 
 ### What's new?
 
 - New config variable `guild_age`, similar to `account_age`, `guild_age` sets a limit as to how long a user has to wait after they joined the server to message Modmail.
 - `guild_age` can be set the same way as `account_age`.
 
-# v2.18.5
+## v2.18.5
 
 Fix help command bug when using external plugins.
 
-# v2.18.4
+## v2.18.4
 
 Fix the teams permission bug.
 
-# v2.18.2
+## v2.18.2
 
 ### Changed
 
 Commands now have better error messages. Instead of sending the help message for a command when an argument fails to be converted, the bot now says like "User 'bob' not found" instead.
 
-# v2.18.1
+## v2.18.1
 
 Un-deprecated the `OWNERS` config variable to support Discord developer team accounts.
 
-# v2.18.0
+## v2.18.0
 
 ### New Permissions System
 
@@ -1042,14 +1059,14 @@ When updating to this version, all prior permission settings with guild-based pe
 
 - The help message no longer conceals inaccessible commands due to check failures.
 
-# v2.17.2
+## v2.17.2
 
 ### Changed
 
 - Logs search command will search through log keys as well now. 
 - For example, `?logs search e7499e82f8ff`.
 
-# v2.17.1
+## v2.17.1
 
 ### What's new?
 
@@ -1062,7 +1079,7 @@ How Modmail checks if a channel is a thread:
 1. The bot first checks if the channel topic is in the format `User ID: XXXX`, this means it is a thread.
 2. If a channel topic is not found, the bot searches through the message history of a channel to find the thread creation embed. This step should never yield a thread for an average user. Still, in the case of another bot messing up the channel topic (happened to a user before), this extra step was added. 
 
-# v2.17.0
+## v2.17.0
 
 ### What's new?
 
@@ -1074,13 +1091,13 @@ To enable this functionality, do `?config set reply_without_command true` and to
 
 The `move` command now only requires `manage_messages` perms instead of `manage_channels`.
 
-# v2.16.1
+## v2.16.1
 
 ### Fixed
 
 An issue where a scheduled close would not execute over a long time if the recipient no shares any servers with the bot.
 
-# v2.16.0
+## v2.16.0
 
 ### Changed
 
@@ -1090,13 +1107,13 @@ option ASAP. Your bot will not work unless you switch to the self-hosted option.
 
 If a member leaves/joins (again) while they are a recipient of a thread, a message will be sent to notify you that this has occurred.
 
-# v2.15.1
+## v2.15.1
 
 ### Fixed
 
 Emergency patch of a SyntaxError.
 
-# v2.15.0
+## v2.15.0
 
 ### What's new?
 
@@ -1113,7 +1130,7 @@ They will be provided by string variables that you can incorporate into them:
 
 Example usage would be: ``?config set thread_close_message {closer.mention} closed the thread, here is the link to your logs: [**`{logkey}`**]({loglink})``
 
-# v2.14.0
+## v2.14.0
 
 ### What's new?
 
@@ -1134,7 +1151,7 @@ You now have complete control of the look of the thread creation and close embed
 - `thread_close_title` - the title of the embed. Defaults to 'Thread Closed'
 - `thread_close_footer` - the footer text in the embed. Defaults to 'Replying will create a new thread'
 
-# v2.13.13
+## v2.13.13
 
 ### What's new? 
 
@@ -1146,12 +1163,12 @@ You can do this via `?config set sent_emoji disable`.
 
 The bot now handles having too many roles to show in the thread created embed. 
 
-# v2.13.12
+## v2.13.12
 
 ### What's new?
 Added image link in title in case discord fails to embed an image.
 
-# v2.13.11
+## v2.13.11
 
 ### What's new?
 - Introduced a new configuration variable `account_age` for setting a minimum account creation age.
@@ -1163,18 +1180,18 @@ Added image link in title in case discord fails to embed an image.
 - `?block` reason cannot start with `System Message: ` as it is now reserved for internal user blocking.
 - `?block`, like `?close`, now supports a block duration (temp blocking).
 
-# v2.13.10
+## v2.13.10
 
 ### Fixed
 - Fixed an issue where status and activity do not work if they were modified wrongly in the database.
   - This was primarily an issue for older Modmail users, as the old `status` configuration variable clashes with the new `status` variable.
 
-# v2.13.9
+## v2.13.9
 
 ### Fixed
 - Fixed a bug where an error was raised when a message with received during a scheduled closure.
 
-# v2.13.8
+## v2.13.8
 
 ### Fixed
 - A bug where a thread was blocked from sending messages when multiple images were uploaded, due to a typo.
@@ -1182,7 +1199,7 @@ Added image link in title in case discord fails to embed an image.
 ### Changed
 - Uses https://hasteb.in instead of https://hastebin.com for `?debug hastebin`.
 
-# v2.13.7
+## v2.13.7
 
 ### What's new?
 - The ability to enable typing interactions. 
@@ -1194,12 +1211,12 @@ Added image link in title in case discord fails to embed an image.
 ### Changed
 - The internals for `activity` has drastically changed to accommodate the new `status` command.  
 
-# v2.13.6
+## v2.13.6
 
 ### Fixed
 - Fixed a bug in the contact command where the response message did not send.
 
-# v2.13.5
+## v2.13.5
 
 ### What's new?
 - You will no longer need to view your bot debug logs from Heroku. `debug` will show you the recent logs within 24h through a series of embeds.
@@ -1221,40 +1238,40 @@ Added image link in title in case discord fails to embed an image.
   - In most cases, you can ignore this change.
 - `on_error` and `CommandNotFound` are now logged.
 
-# v2.13.4
+## v2.13.4
 
 ### Changed
 - `?contact` no longer raise a silent error in Heroku logs when the recipient is a bot. Now Modmail responds with an error message.
 
-# v2.13.3
+## v2.13.3
 
 ### Fixed
 - Fixed a typo in the config options.
 
-# v2.13.2
+## v2.13.2
 
 ### Fixed
 - Installing `requirements.txt` files in plugins.
 
-# v2.13.1
+## v2.13.1
 
 ### Fixed
 - Reading `requirements.txt` files in plugins.
 
-# v2.13.0
+## v2.13.0
 
 ### What's new? 
 - Plugins:
   - Think of it like addons! Anyone (with the skills) can create a plugin, make it public and distribute it. Add a welcome message to Modmail, or moderation commands? It's all up to your imagination!   Have a niche feature request that you think only your server would benefit? Plugins are your go-to!
   - [Creating Plugins Documentation](https://github.com/modmail-dev/modmail/wiki/Plugins).
 
-# v2.12.5
+## v2.12.5
 
 ### Fixed
 
 - `config del` command will now work correctly on self-hosted DB bots.
 
-# v2.12.4
+## v2.12.4
 
 ### What's new?
 - Named colors are now supported! Over 900 different common color names are recognized. A list of color names can be found in [core/_color_data.py](https://github.com/modmail-dev/modmail/blob/master/core/_color_data.py).
@@ -1262,7 +1279,7 @@ Added image link in title in case discord fails to embed an image.
   - For example: `config set main_color yellowish green`.
 - New config var `main_color` allows you to customize the main Modmail color (as requested by many). Defaults to Discord `blurple`.
 
-# v2.12.3
+## v2.12.3
 
 ### Fixed
 - Patched a bug where `logs` sub-commands were accessible by anyone.
@@ -1270,18 +1287,18 @@ Added image link in title in case discord fails to embed an image.
 
 Huge thanks to Sasiko for reporting these issues.
 
-# v2.12.2
+## v2.12.2
 
 ### Fixed
 - Fixed a bug in self-hosted `?update` command.
 
-# v2.12.1
+## v2.12.1
 
 ### Changed
 
 - `logs search` now also searches usernames present in thread logs.
 
-# v2.12.0
+## v2.12.0
 
 ### Important
 **In the future, the Modmail API (https://modmail.tk) will be deprecated. This is because we are providing free service without getting anything in return. Thus we do not have the resources to scale to accommodate more users. 
@@ -1304,22 +1321,22 @@ We recommend using your own database for logs. In the future you will soon get a
   - This may require you to change your activity message to accommodate this fix.
 - A problem where `main_category_id` and `log_channel_id` weren't updated when their corresponding channel or category get deleted. 
 
-# v2.11.0
+## v2.11.0
 
 ### What's new?
 - `loglink` command, returns the log link for the current thread.
 
-# v2.10.2
+## v2.10.2
 
 ### Changed
 - Your logs now track and show edited messages.
 
-# v2.10.1
+## v2.10.1
 
 ### Changed
 - Use reply author's top role for the mod tag by default.
 
-# v2.10.0
+## v2.10.0
 
 ### What's new?
 - `anonreply` command to anonymously reply to the recipient. 
@@ -1328,12 +1345,12 @@ The username of the anonymous user defaults to the `mod_tag` (the footer text of
 ### Changed
 - Your bot now logs all messages sent in a thread channel, including discussions that take place. You can now toggle to view them in the log viewer app.
 
-# v2.9.4
+## v2.9.4
 
 ### Fixed
 - Small bug due to a typo.
 
-# v2.9.3
+## v2.9.3
 
 ### Changed
 - Forgot to enable custom embed colors.
@@ -1341,7 +1358,7 @@ The username of the anonymous user defaults to the `mod_tag` (the footer text of
 ### What's new?
 - Ability to set a custom `mod_tag` (the text in the footer of the mod reply embed, which by default says "Moderator")
 
-# v2.9.2
+## v2.9.2
 
 ### Changed
 - Improve format of thread info embed. Slightly cleaner and simpler now.
@@ -1353,7 +1370,7 @@ The username of the anonymous user defaults to the `mod_tag` (the footer text of
 ### What's new?
 - Ability to set your own custom `mod_color` and `recipient_color` for the thread message embeds.
 
-# v2.9.1
+## v2.9.1
 
 ### Changed
 - Changed order of arguments for `contact`. This is so that you can use aliases to their full potential. 
@@ -1362,25 +1379,25 @@ The username of the anonymous user defaults to the `mod_tag` (the footer text of
 - You can add an alias by doing: `alias add recruit contact "Recruitment Category"`.
   - Now you can use the alias via: `recruit @somedude`.
 
-# v2.9.0
+## v2.9.0
 
 ### What's new?
 - New command `note` will add a system message to your thread logs. - - This is useful for noting the context of a conversation.
 
-# v2.8.1
+## v2.8.1
 
 ### Fixed
 - Fixed bug where thread logs were getting duplicated when using the `contact` command.
 - Fixed bug where the wrong key was used for logs, which caused some `log` command log links to point to an HTTP 404 Not Found.
   - A minor oversight from commit 1ba74d9.
 
-# v2.8.0
+## v2.8.0
 
 ### Changed
 - Major improvement in viewing thread logs.
 - Log links are now rendered in HTML instead of plain text.
 
-# v2.7.2
+## v2.7.2
 
 ### What's new? 
 - `config options` command to see a list of valid config variables that you can modify.
@@ -1390,7 +1407,7 @@ Thread channels will now default to being private (`@everyone`'s read message pe
   - If the thread creation category could not be resolved.
   - This will save you from some trouble if, for whatever reason, your configuration gets messed up.
 
-# v2.7.1
+## v2.7.1
 
 ### Changed
 
@@ -1403,29 +1420,29 @@ Thread channels will now default to being private (`@everyone`'s read message pe
 - If your Modmail bot was set up a long time ago, you might experience an issue where messages were sent outside of the category.
   - To fix this, set `main_category_id` to the ID of the Modmail category.
   
-# v2.7.0
+## v2.7.0
 
 ### Changed
 
 - `move` command now syncs thread channel permissions with the destination category.
 - `contact` command now supports an optional category argument (where the thread channel will be created).
 
-# v2.6.3
+## v2.6.3
 
 ### Fixes
 - Fixed small issue with finding threads.
 
-# v2.6.2
+## v2.6.2
 
 ### Fixes
 - Fixed log URLs for self-hosting users.
 
-# v2.6.1
+## v2.6.1
 
 ### Fixed
 - Replaced the testing `API_BASE_URL` with the actual URL.
 
-# v2.6.0
+## v2.6.0
 
 ### What's new?
 - `threads` is now a default alias to `logs`.
@@ -1436,17 +1453,17 @@ Thread channels will now default to being private (`@everyone`'s read message pe
 - We still support the numbers to not break everyone's URLs so quickly, but both work at the moment.
 - This is a huge change to the backend logging, and there might be migration errors. If so, please contact us in our [Discord server](https://discord.gg/2fMbf2N).
 
-# v2.5.2
+## v2.5.2
 
 ### Fixes
 - Fixed a bug where requests sent when the API was not ready.
 
-# v2.5.1
+## v2.5.1
 
 ### Fixes
 - Emergency patch to save configs.
 
-# v2.5.0
+## v2.5.0
 
 ### Background
 - Bots hosted by Heroku restart at least once every 27 hours.
@@ -1460,32 +1477,32 @@ Thread channels will now default to being private (`@everyone`'s read message pe
   - Deleted when a thread is closed.
 - Use `call_later()` instead of `sleep()` for scheduling.
 
-# v2.4.5
+## v2.4.5
 
 ### Fixed
 Fixed activity setting due to flawed logic in `config.get()` function.
 
-# v2.4.4
+## v2.4.4
 
 ### Fixed
 Fixed a bug in the `?activity` command where it would fail to set the activity on bot restart if the activity type was `playing`.
 
-# v2.4.3
+## v2.4.3
 
 ### Changed
  - Moved self-hosted log viewer to a separate repo.
 
-# v2.4.2
+## v2.4.2
 
 ### What's new?
 - Ability to set your own Twitch URL for `streaming` activity status.
 
-# v2.4.1
+## v2.4.1
 
 ### Fixed
 - Small bug in `?activity` command.
 
-# v2.4.0
+## v2.4.0
 
 ### What's new?
 - Added the `?activity` command for setting the activity
@@ -1495,7 +1512,7 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
 - Removed the deprecated `status` command.
 - This also means you will have to reset your bot status with the `?activity` command, as the `?status` command was removed.
 
-# v2.3.0
+## v2.3.0
 
 ### What's new?
 - Ability to self-host logs.
@@ -1509,7 +1526,7 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
 - Bug in subscribe command.
   - It will now unsubscribe after a thread is closed.
 
-# v2.2.0
+## v2.2.0
 
 ### What's new?
 - Notify command `notify [role]`.
@@ -1523,12 +1540,12 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
 ### Changed
 - Slightly improved log channel message format.
 
-# v2.1.1
+## v2.1.1
 
 ### Fixed
 - Small bug in `close` command.
 
-# v2.1.0
+## v2.1.0
 
 ### What's new?
 - Ability to set a custom thread-creation-response message.
@@ -1541,12 +1558,12 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
   - You can now close the thread after a delay and use a custom thread close message.
   - You also now can close a thread silently.
 
-# v2.0.10
+## v2.0.10
 
 ### Security
 - Fix a bug where blocked users were still able to message Modmail.
 
-# v2.0.9
+## v2.0.9
 
 ### What's new?
 - Support for custom blocked and sent emoji.
@@ -1556,7 +1573,7 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
 - Support multiple images and file attachments in one message.
 - This is only possible on mobile, so its good to handle it in code.
 
-# v2.0.8
+## v2.0.8
 
 ### What's new?
 - Added the ability to use your own log channel.
@@ -1569,7 +1586,7 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
 - Blocked users are now stored in the database instead of in the channel topic.
   - This means you can delete the top channel in the Modmail category now (after migrating the currently blocked users).
 
-# v2.0.7
+## v2.0.7
 
 ### What's new?
 - Added a `changelog` command to view the bot's changelog within discord.
@@ -1579,39 +1596,39 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
 - Auto-update messages also show the latest changes from the GitHub repo.
 - Removed the "latest changes" section from the `about` command.
 
-# v2.0.6
+## v2.0.6
 
 ### Fixed
 - Fix logs sending duplicated thread close logs.
 - The bot will now tell you that a user is no longer in the server when you try to reply to a thread.
   - Before this, it looked like you replied to the thread, but in reality, the message was not sent.
 
-# v2.0.5
+## v2.0.5
 
 ### Changed
 - `alias` command now checks if you are adding a valid alias-command combo.
 - Manually deleting a channel will now correctly close the thread and post logs.
 
-# v2.0.4
+## v2.0.4
 
 ### Fixed
 - Fixed a one-off bug where the channel topic disappears, but Modmail operations should continue.
 - Fixed `linked_message_id` issues.
 
-# v2.0.3
+## v2.0.3
 
 ### Fixed
 - The thread creation embed now shows the correct number of past logs.
 - If using a separate server setup, roles in the info embed now are shown as names instead of mentions.
   - This is because you can't mention roles across servers.
 
-# v2.0.2
+## v2.0.2
 
 ### Security
 - Made the `logs` command require "manage messages" permissions to execute.
   - Before this patch, anyone could use the `logs` commands.
 
-# v2.0.1
+## v2.0.1
 
 ### Changed
 - Improved `block` / `unblock` commands.
@@ -1620,7 +1637,7 @@ Fixed a bug in the `?activity` command where it would fail to set the activity o
 ### Fixed
 - Setup command now configures permissions correctly so that the bot will always be able to see the main operations category.
 
-# v2.0.0
+## v2.0.0
 
 This release introduces the use of our centralized [API service](https://github.com/modmail-dev/webserver) to enable dynamic configuration, auto-updates, and thread logs.
 To use this release, you must acquire an API token from https://modmail.tk.
