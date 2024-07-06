@@ -16,7 +16,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -47,6 +46,8 @@ jobs:
     environment: production
     env:
       aws_region: eu-west-2
+    needs:
+      - build-and-push-image
     steps:
       - name: AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
