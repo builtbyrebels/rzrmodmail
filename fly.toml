@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for rzrmodmail on 2024-09-27T21:10:15Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'rzrmodmail'
+primary_region = 'lhr'
+
+[build]
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[processes]
+  app = "python bot.py"
+
+[[restart]]
+  policy = "always"
+  retries = 10
+  processes = ["app"]
